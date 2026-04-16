@@ -877,8 +877,8 @@ class DataFetcherManager:
             self._fetchers = [
                 efinance,
                 akshare,
-                tushare,
-                pytdx,
+                # tushare,
+                # pytdx,
                 baostock,
                 yfinance,
                 longbridge,
