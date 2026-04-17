@@ -1462,38 +1462,7 @@ class DataFetcherManager:
         stock_code = normalize_stock_code(stock_code)
         static_name = STOCK_NAME_MAP.get(stock_code)
 
-        # 只加这里！别的一行不动！
-        # ====================== 本地股票列表，不联网 ======================
-    MY_LOCAL_STOCKS = {
-        "688048": "长光华芯",
-        "300866": "安克创新",
-        "000408": "藏格矿业",
-        "002428": "云南锗业",
-        "600490": "鹏欣资源",
-        "001270": "铖昌科技",
-        "688102": "斯瑞新材",
-        "002353": "杰瑞股份",
-        "603986": "兆易创新",
-        "002050": "三花智控",
-        "688122": "西部超导",
-        "688019": "安集科技",
-        "300476": "胜宏科技",
-        "688809": "华海清科",
-        "688498": "源杰科技",
-        "603306": "华懋科技",
-        "920185": "贝特瑞",
-        "688234": "天岳先进",
-        "688120": "裕太微",
-        "688027": "国盾量子",
-        "301219": "腾远钴业",
-        "688535": "华海诚科"
-    }
-    if stock_code in MY_LOCAL_STOCKS:
-        self._cache_stock_name(stock_code, MY_LOCAL_STOCKS[stock_code])
-        return MY_LOCAL_STOCKS[stock_code]
-    # ==================================================================
-        # 下面你原来的所有代码 完全保留，不动！
-        
+    
         # 1. 先检查缓存
         cached_name = self._get_cached_stock_name(stock_code)
         if cached_name is not None:
